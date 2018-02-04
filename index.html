@@ -10,15 +10,15 @@
     </head>
     <body ng-app="AppModule">
         My Angular app
-        <div ng-controller="UsersListController">
-            <h1 ng-bind="title"></h1>
+        <div ng-controller="UsersListController as ctrl">
+            <h1 ng-bind="ctrl.title"></h1>
             <ul>
-                <li ng-repeat="user in users" ng-bind="user" ng-click="selectUser(user)"></li>
+                <li ng-repeat="user in ctrl.users" ng-bind="user" ng-click="ctrl.selectUser(user)"></li>
             </ul>
 
             <h2>Selected User</h2>
-            {{selectedUser}}
-            <welcome-greeting ng-if="selectedUser" user="selectedUser" background="blue" subtext="subtext" ongreetingnameclicked='greetingNameClicked()'></welcome-greeting>
+            {{ctrl.selectedUser}}
+            <welcome-greeting ng-if="ctrl.selectedUser" user="ctrl.selectedUser" background="blue" subtext="ctrl.subtext" ongreetingnameclicked='ctrl.greetingNameClicked()'></welcome-greeting>
         </div>
 
         <counter></counter>
