@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Angular 1.5 App</title>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="src/app.js"></script>
+        <script src="src/services/users.service.js"></script>
+        <script src="src/controllers/users-list.controller.js"></script>
+        <script src="src/components/welcome-greeting.component.js"></script>
+        <script src="src/directives/counter.directive.js"></script>
+    </head>
+    <body ng-app="AppModule">
+        My Angular app
+        <div ng-controller="UsersListController">
+            <h1 ng-bind="title"></h1>
+            <ul>
+                <li ng-repeat="user in users" ng-bind="user" ng-click="selectUser(user)"></li>
+            </ul>
+
+            <h2>Selected User</h2>
+            {{selectedUser}}
+            <welcome-greeting ng-if="selectedUser" user="selectedUser" background="blue" subtext="subtext" ongreetingnameclicked='greetingNameClicked()'></welcome-greeting>
+        </div>
+
+        <counter></counter>
+    </body>
+</html>

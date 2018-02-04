@@ -1,0 +1,25 @@
+{
+  "name": "angular-jasmine-karma",
+  "version": "1.0.0",
+  "description": "This is an angular 1.5+ app that uses angular.component() functionality throughout the app. It uses ES6. The app also has Jasmine integration.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.13",
+    "angular": "^1.6.8",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.8",
+    "jasmine": "^2.9.0",
+    "jasmine-core": "^2.9.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-spec-reporter": "0.0.32"
+  }
+}
